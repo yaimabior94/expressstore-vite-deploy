@@ -58,50 +58,39 @@ app.use((req, res, next) => {
 });
 
 /**
- * Main async bootstrap
+ * Global error handler
+ */
+app.use(
+  (err: any, _req: Request, res: Response, _next: NextFunction) => {
+    const status = err.status || err.statusCode || 500;
+    const message = err.message || "Internal Server Error";
+
+    res.status(status).json({ message });
+    log(`ERROR: ${message}`);
+
+    if (app.get("env") === "development") {
+      console.error(err);
+    }
+  }
+);
+
+/**
+ * Main async bootstrap for routes & Vite
+ * NOTE: For Vercel, do NOT start the server here
  */
 (async () => {
-  // Register all routes (returns http.Server)
-  const server = await registerRoutes(app);
+  // Register all routes (async)
+  await registerRoutes(app);
 
-  /**
-   * Global error handler
-   */
-  app.use(
-    (err: any, _req: Request, res: Response, _next: NextFunction) => {
-      const status = err.status || err.statusCode || 500;
-      const message = err.message || "Internal Server Error";
-
-      res.status(status).json({ message });
-      log(`ERROR: ${message}`);
-
-      // In dev, we want the stack trace printed
-      if (app.get("env") === "development") {
-        console.error(err);
-      }
-    }
-  );
-
-  /**
-   * Vite only in dev — static build in production
-   */
   if (app.get("env") === "development") {
-    await setupVite(app, server);
+    // In dev locally, you may want to setup Vite
+    const dummyServer = { listen: () => {} } as any;
+    await setupVite(app, dummyServer);
   } else {
+    // Serve static production assets
     serveStatic(app);
   }
-
-  /**
-   * Start the server
-   *
-   * NOTE:
-   * - Removed "reusePort": true (NOT supported on Windows)
-   * - Removed host: "0.0.0.0" (causes ENOTSUP in Node 25 on Windows)
-   * - Using server.listen(port) → safe & universal
-   */
-  const port = parseInt(process.env.PORT || "5000", 10);
-
-  server.listen(port, () => {
-    log(`Server running on http://localhost:${port}`);
-  });
 })();
+
+// ✅ Export the app for Vercel serverless
+export default app;
