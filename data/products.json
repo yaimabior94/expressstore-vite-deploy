@@ -1,0 +1,56 @@
+[
+  {
+    "id": "30049919-8c1a-4a3f-8e1b-113a6d59823b",
+    "name": "Ceramic Vase",
+    "description": "Elegant minimalist ceramic vase with a matte white finish. Perfect for fresh or dried flowers, adding a touch of sophistication to any room.",
+    "price": "45.00",
+    "category": "decor",
+    "imageUrl": "/generated_images/White_ceramic_vase_product_0bfec5ac.png",
+    "stock": 13
+  },
+  {
+    "id": "eab0dc49-771d-449b-9345-fa4051d853c3",
+    "name": "Modern Table Lamp",
+    "description": "Contemporary brass table lamp with linen shade. Provides warm ambient lighting while serving as a stylish accent piece for your desk or nightstand.",
+    "price": "89.00",
+    "category": "lighting",
+    "imageUrl": "/generated_images/Modern_brass_table_lamp_f92993df.png",
+    "stock": 6
+  },
+  {
+    "id": "f3062dee-bf1d-40b3-81c0-716af1e55ee2",
+    "name": "Luxury Scented Candle",
+    "description": "Premium soy wax candle in elegant glass vessel with wooden lid. Features a sophisticated blend of natural fragrances for a calming atmosphere.",
+    "price": "32.00",
+    "category": "decor",
+    "imageUrl": "/generated_images/Luxury_scented_candle_glass_50ab2043.png",
+    "stock": 23
+  },
+  {
+    "id": "7e6534f3-f4b3-4a08-a9d8-5f37a3440696",
+    "name": "Handwoven Throw Blanket",
+    "description": "Luxuriously soft throw blanket in beige herringbone pattern. Handcrafted from premium materials for ultimate comfort and timeless style.",
+    "price": "78.00",
+    "category": "textiles",
+    "imageUrl": "/generated_images/Handwoven_throw_blanket_beige_29bb57e8.png",
+    "stock": 11
+  },
+  {
+    "id": "9ba51a11-3c7f-4612-99eb-0d86c8cff85e",
+    "name": "Geometric Planter Set",
+    "description": "Set of three modern terracotta planters in varying sizes. Perfect for succulents and small plants, featuring contemporary geometric design.",
+    "price": "54.00",
+    "category": "decor",
+    "imageUrl": "/generated_images/Geometric_terracotta_planters_set_0215fcb0.png",
+    "stock": 9
+  },
+  {
+    "id": "4ede6f2f-ba55-46c1-a95f-9644f8fbab72",
+    "name": "Botanical Wall Art",
+    "description": "Minimalist botanical line drawing print in natural oak frame. Adds a touch of nature-inspired elegance to your walls with Scandinavian aesthetic.",
+    "price": "65.00",
+    "category": "decor",
+    "imageUrl": "/generated_images/Botanical_wall_art_print_d48bf179.png",
+    "stock": 16
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "userId": "default-user",
+    "total": "45.00",
+    "status": "pending",
+    "id": "f39c4ee1-95a3-4936-b06a-2dd45e5545c5",
+    "createdAt": "2025-11-16T07:08:31.661Z"
+  },
+  {
+    "userId": "default-user",
+    "total": "517.00",
+    "status": "pending",
+    "id": "b9bdf97d-9e69-40fa-940b-74df6c9b4dba",
+    "createdAt": "2025-11-16T10:35:49.750Z"
+  }
+]
